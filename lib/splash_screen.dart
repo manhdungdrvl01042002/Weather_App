@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/home_screen.dart';
+import 'package:weather_app/main.dart';
 
 class Splash_Screen extends StatelessWidget {
   const Splash_Screen({super.key});
@@ -20,6 +22,46 @@ class Splash_Screen extends StatelessWidget {
               image: AssetImage("assets/images/background_splash.png"),
               alignment: Alignment.bottomCenter),
         ),
+        child: Center(
+            child: Column(
+          children: [
+            const SizedBox(
+              height: 720,
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const HomeScreen(),
+                  ),
+                );
+              },
+              child: Container(
+                margin: const EdgeInsets.symmetric(
+                  horizontal: 80,
+                ),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 16,
+                ),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(32),
+                    color: Colors.white),
+                child: const Center(
+                  child: Text(
+                    "EXPLORE",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Color.fromRGBO(19, 14, 81, 1),
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ),
+              ),
+            )
+          ],
+        )),
       ),
     );
   }
