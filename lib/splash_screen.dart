@@ -25,7 +25,7 @@ class Splash_Screen extends StatelessWidget {
             child: Column(
           children: [
             const SizedBox(
-              height: 720,
+              height: 600,
             ),
             InkWell(
               onTap: () {
